@@ -249,7 +249,7 @@ export default function Page() {
     }
 
     try {
-      await axios.post(`${appLocalizer.proxyUrl}/set_llm_params`, params, {
+      await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/set_llm_params`, params, {
         headers: {
           "Content-Type": "application/json",
         },
